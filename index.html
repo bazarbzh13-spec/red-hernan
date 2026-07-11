@@ -1,191 +1,441 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Cajero Her Ganemos</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<head>
-  <style>
-    .games {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      max-width: 440px;
-      margin: 30px auto;
-    }
 
-    .games img {
-      width: 100%;
-      border-radius: 14px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.6);
-      transition: transform 0.2s ease;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .games img:hover {
-      transform: scale(1.05);
-    }
-  </style>
-</head>
+<title>Cajera Cami | Atención por WhatsApp</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: radial-gradient(circle at top, #2b1a00, #000);
-      color: white;
-      text-align: center;
-    }
+<meta name="description" content="Atención personalizada por WhatsApp las 24 horas.">
 
-    .vip {
-      margin-top: 30px;
-      color: gold;
-      border: 1px solid gold;
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 14px;
-    }
+<meta property="og:title" content="Cajera Cami">
+<meta property="og:description" content="Atención personalizada las 24 horas por WhatsApp.">
+<meta property="og:image" content="https://red-hernan.vercel.app/img/preview.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://red-hernan.vercel.app/">
 
-    .card {
-      background: linear-gradient(180deg, #0b1d33, #050b15);
-      max-width: 420px;
-      margin: 40px auto;
-      padding: 30px 20px;
-      border-radius: 20px;
-      box-shadow: 0 0 30px rgba(255, 200, 0, 0.25);
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
 
-    .card h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
+<style>
 
-    .highlight {
-      color: gold;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
 
-    .card p {
-      color: #cfcfcf;
-      font-size: 15px;
-    }
+body{
 
-    .btn {
-      margin-top: 25px;
-      background: linear-gradient(180deg, #ffd000, #ffb700);
-      color: black;
-      text-decoration: none;
-      padding: 16px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 18px;
-      gap: 10px;
-    }
+background:#05070d;
+color:white;
+overflow-x:hidden;
 
-    .btn img {
-      width: 24px;
-    }
+}
 
-    .info {
-      margin-top: 20px;
-      font-size: 13px;
-      color: gold;
-    }
+/* Fondo */
 
-    .stats {
-      display: flex;
-      justify-content: space-around;
-      margin: 30px auto;
-      max-width: 420px;
-      font-size: 14px;
-    }
+body::before{
 
-    .stats span {
-      display: block;
-      color: gold;
-      font-weight: bold;
-      margin-top: 5px;
-    }
+content:"";
+position:fixed;
+inset:0;
+background:url("./img/fondo.jpg") center center/cover no-repeat;
+filter:brightness(.35);
+z-index:-2;
 
-    .games {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      max-width: 420px;
-      margin: 40px auto;
-    }
+}
 
-    .games img {
-      width: 100%;
-      border-radius: 10px;
-    }
+body::after{
 
-    footer {
-      font-size: 11px;
-      color: #888;
-      margin-bottom: 20px;
-    }
-  </style>
+content:"";
+position:fixed;
+inset:0;
+background:linear-gradient(to bottom,
+rgba(0,0,0,.55),
+rgba(5,10,20,.95));
+z-index:-1;
+
+}
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+.card{
+
+max-width:520px;
+
+background:rgba(15,20,35,.55);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:30px;
+
+padding:40px;
+
+text-align:center;
+
+box-shadow:0 0 60px rgba(255,210,0,.15);
+
+}
+
+.avatar{
+
+width:170px;
+
+margin:auto;
+
+display:block;
+
+filter:drop-shadow(0 0 20px gold);
+
+animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+.vip{
+
+display:inline-block;
+
+padding:8px 20px;
+
+border-radius:40px;
+
+background:rgba(255,208,0,.12);
+
+color:#FFD700;
+
+margin-bottom:20px;
+
+font-weight:700;
+
+}
+
+h1{
+
+font-size:48px;
+
+line-height:1.1;
+
+margin-bottom:15px;
+
+}
+
+.gold{
+
+color:#FFD700;
+
+}
+
+p{
+
+color:#ddd;
+
+font-size:18px;
+
+line-height:1.7;
+
+margin-bottom:30px;
+
+}
+
+.btn{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:15px;
+
+text-decoration:none;
+
+background:#25D366;
+
+padding:18px;
+
+border-radius:16px;
+
+font-size:22px;
+
+font-weight:700;
+
+color:white;
+
+transition:.25s;
+
+box-shadow:0 0 35px rgba(37,211,102,.5);
+
+}
+
+.btn:hover{
+
+transform:scale(1.04);
+
+}
+
+.features{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+margin-top:35px;
+
+}
+
+.box{
+
+background:rgba(255,255,255,.05);
+
+padding:18px;
+
+border-radius:16px;
+
+}
+
+.box h3{
+
+color:#FFD700;
+
+margin-bottom:6px;
+
+}
+
+.section{
+
+padding:70px 20px;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.section h2{
+
+font-size:38px;
+
+text-align:center;
+
+margin-bottom:50px;
+
+}
+
+.games{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+
+gap:18px;
+
+}
+
+.games img{
+
+width:100%;
+
+border-radius:18px;
+
+transition:.3s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.5);
+
+}
+
+.games img:hover{
+
+transform:translateY(-8px);
+
+}
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+color:#999;
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <div class="vip">ACCESO VIP</div>
+<section class="hero">
 
-  <div class="card">
-    <h1>OBTENÉ UN <span class="highlight">40%</span><br>EN TU PRIMER DEPÓSITO</h1>
-    <p>Escribinos apretando el botón de abajo</p>
+<div class="card">
 
-    <a class="btn" href="https://wa.me/5491176035018?text=Hola%20quiero%20acceder%20a%20la%20bonificacion%20de%20bienvenida">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-      WHATSAPP OFICIAL
-    </a>
+<img class="avatar" src="./img/avatar.png">
 
-    <div class="info">ATENCIÓN Y RETIROS SIN LÍMITES LAS 24 HS</div>
-  </div>
+<div class="vip">
 
-  <div class="stats">
-    <div>Mínimo de CARGA <span>$1.000</span></div>
-    <div>Mínimo de RETIRO <span>$5.000</span></div>
-    <div>RETIROS <span>24 HS</span></div>
-  </div>
+ATENCIÓN PERSONALIZADA
 
-  <h2 class="section">⭐ Nuevos</h2>
-
-<div class="games">
-  <img src="./img/arbol.jpg" alt="Tree of Riches">
-  <img src="./img/christmascarol.jpg" alt="Christmas Carol">
-  <img src="./img/Congo.jpg" alt="Congo Cash">
-  <img src="./img/goldparty.jpg" alt="Gold Party">
-  <img src="./img/griego.jpg" alt="Greek Gods">
-  <img src="./img/jokerjewel.jpg" alt="Joker Jewel">
-  <img src="./img/leon.jpg" alt="5 Lions">
-  <img src="./img/mustanggold.jpg" alt="Mustang Gold">
-  <img src="./img/oeste.jpg" alt="Wild West">
-  <img src="./img/ruleta.jpg" alt="European Roulette">
 </div>
 
+<h1>
 
-  <footer>
-    © 2025 | +18 | Jugá con responsabilidad
-  </footer>
+Bienvenido a <span class="gold">Cajera Cami</span>
+
+</h1>
+
+<p>
+
+Contactanos por WhatsApp para recibir información y atención personalizada.
+
+</p>
+
+<a class="btn"
+
+target="_blank"
+
+href="https://wa.me/5491176035018?text=Hola%20quiero%20más%20información.">
+
+📲 Hablar por WhatsApp
+
+</a>
+
+<div class="features">
+
+<div class="box">
+
+<h3>⚡ Atención</h3>
+
+<p>Disponible las 24 horas.</p>
+
+</div>
+
+<div class="box">
+
+<h3>💬 Soporte</h3>
+
+<p>Respuesta rápida.</p>
+
+</div>
+
+<div class="box">
+
+<h3>🎮 Opciones</h3>
+
+<p>Diferentes experiencias disponibles.</p>
+
+</div>
+
+<div class="box">
+
+<h3>⭐ Comunidad</h3>
+
+<p>Miles de usuarios.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>
+
+Explorá algunas opciones
+
+</h2>
+
+<div class="games">
+
+<img src="./img/arbol.jpg">
+
+<img src="./img/christmascarol.jpg">
+
+<img src="./img/Congo.jpg">
+
+<img src="./img/goldparty.jpg">
+
+<img src="./img/griego.jpg">
+
+<img src="./img/jokerjewel.jpg">
+
+<img src="./img/leon.jpg">
+
+<img src="./img/mustanggold.jpg">
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="card">
+
+<h2>
+
+¿Listo para comenzar?
+
+</h2>
+
+<p>
+
+Escribinos y recibí atención personalizada.
+
+</p>
+
+<a class="btn"
+
+target="_blank"
+
+href="https://wa.me/5491176035018?text=Hola%20quiero%20más%20información.">
+
+📲 Abrir WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Cajera Cami
+
+</footer>
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
